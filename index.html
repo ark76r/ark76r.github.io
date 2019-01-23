@@ -6,6 +6,9 @@
 <p>
 Online status: <span id='online'>unknown</span>
 </p>
+
+<script src="script/main.js"></script>
+
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
@@ -17,14 +20,13 @@ if ('serviceWorker' in navigator) {
       console.log('ServiceWorker registration failed: ', err);
     });
 
-  document.body.addEventListener('online',  function() { updateIndicator(); }, false);
-  document.body.addEventListener('offline', function() {updateIndicator(); }, false);
   updateIndicator();
 
   });
 }
+document.body.addEventListener('online',  function() { updateIndicator(); }, false);
+document.body.addEventListener('offline', function() { updateIndicator(); }, false);
 </script>
 
-<script src="script/main.js"></script>
 </body>
 </html>
