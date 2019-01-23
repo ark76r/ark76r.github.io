@@ -3,7 +3,4 @@ function updateIndicator() {
 }
 
 
-window.addEventListener('load', updateIndicator);
-window.addEventListener('online', updateIndicator);
-window.addEventListener('offline', updateIndicator);
 

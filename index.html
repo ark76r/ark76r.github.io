@@ -17,9 +17,14 @@ if ('serviceWorker' in navigator) {
       console.log('ServiceWorker registration failed: ', err);
     });
   });
+
+  document.body.addEventListener('online',  function() { updateIndicator(); }, false);
+  document.body.addEventListener('offline', function() {updateIndicator(); }, false);
+  updateIndicator();
+
 }
 </script>
 
-<script src="script/main.js"/>
+<script src="script/main.js"></script>
 </body>
 </html>
