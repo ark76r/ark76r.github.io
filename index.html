@@ -16,12 +16,12 @@ if ('serviceWorker' in navigator) {
       // registration failed :(
       console.log('ServiceWorker registration failed: ', err);
     });
-  });
 
   document.body.addEventListener('online',  function() { updateIndicator(); }, false);
   document.body.addEventListener('offline', function() {updateIndicator(); }, false);
   updateIndicator();
 
+  });
 }
 </script>
 
