@@ -24,8 +24,8 @@ if ('serviceWorker' in navigator) {
 
   });
 }
-document.body.addEventListener('online',  function() { updateIndicator(); }, false);
-document.body.addEventListener('offline', function() { updateIndicator(); }, false);
+window.addEventListener('online',  function() { updateIndicator(); }, false);
+window.addEventListener('offline', function() { updateIndicator(); }, false);
 </script>
 
 </body>
