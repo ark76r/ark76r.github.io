@@ -1,32 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MyApp</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1976d2">
+<link rel="stylesheet" href="styles.3ff695c00d717f2d2a11.css"></head>
 <body>
-<h1> Test </h1>
-<a href="docs"> Docs </a>
-<p>
-Online status: <span id='online'>unknown</span>
-</p>
-
-<script src="script/main.js"></script>
-
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-
-  updateIndicator();
-
-  });
-}
-window.addEventListener('online',  function() { updateIndicator(); }, false);
-window.addEventListener('offline', function() { updateIndicator(); }, false);
-</script>
-
-</body>
+  <app-root></app-root>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+<script type="text/javascript" src="runtime.b57bf819d5bdce77f1c7.js"></script><script type="text/javascript" src="polyfills.f5ce8ecea387adbb1689.js"></script><script type="text/javascript" src="main.6d9c34e67fddd87b5bed.js"></script></body>
 </html>
